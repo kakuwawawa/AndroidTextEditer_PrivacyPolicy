@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>プライバシーポリシー | MyTextEditer</title>
+  <meta name="description" content="Androidアプリ MyTextEditer のプライバシーポリシーです。" />
+  <style>
+    :root {
+      --bg: #fffaf7;
+      --card: #ffffffcc;
+      --text: #3f3a3a;
+      --muted: #756f6f;
+      --main: #f7b7c9;
+      --main-soft: #ffe7ef;
+      --accent: #b8e6d3;
+      --accent-soft: #ecfff7;
+      --blue-soft: #eaf3ff;
+      --line: #f0d9e1;
+      --shadow: 0 18px 45px rgba(177, 126, 143, 0.18);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.85;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #ffe7ef 0, transparent 34%),
+        radial-gradient(circle at top right, #e5fff4 0, transparent 30%),
+        linear-gradient(180deg, #fffaf7 0%, #fff2f6 48%, #f5fff9 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: #9a5670;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 32px 18px 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 170px;
+      height: 170px;
+      right: -46px;
+      top: -58px;
+      background: var(--main-soft);
+    }
+
+    .hero::after {
+      width: 120px;
+      height: 120px;
+      right: 88px;
+      bottom: -54px;
+      background: var(--accent-soft);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #4f7c6b;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      position: relative;
+      margin: 18px 0 8px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+    }
+
+    .lead {
+      position: relative;
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0 0;
+    }
+
+    .meta span,
+    .lang-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 7px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .lang-link {
+      color: #9a5670;
+    }
+
+    .toc {
+      margin: 24px 0;
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(240, 217, 225, 0.9);
+    }
+
+    .toc strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .toc ol {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 4px 22px;
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    main {
+      margin-top: 24px;
+    }
+
+    section {
+      margin: 18px 0;
+      padding: 28px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(240, 217, 225, 0.78);
+      box-shadow: 0 10px 28px rgba(177, 126, 143, 0.10);
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      line-height: 1.4;
+    }
+
+    h2::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--main), var(--accent));
+      box-shadow: 0 0 0 6px rgba(247, 183, 201, 0.25);
+    }
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0 0 1em;
+      padding-left: 1.25em;
+    }
+
+    li {
+      margin: 0.25em 0;
+    }
+
+    .note {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: var(--blue-soft);
+      color: #526174;
+    }
+
+    footer {
+      margin-top: 26px;
+      padding: 22px 8px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 18px 12px 42px;
+      }
+
+      .hero,
+      section {
+        padding: 22px 18px;
+      }
+
+      .toc ol {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="badge">Android App Privacy Policy</div>
+      <h1>プライバシーポリシー</h1>
+      <p class="lead">本プライバシーポリシーは、Androidアプリ「MyTextEditer」における利用者情報の取り扱いについて説明するものです。</p>
+      <div class="meta" aria-label="基本情報">
+        <span>アプリ名：MyTextEditer</span>
+        <span>制定日：2026年7月1日</span>
+        <a class="lang-link" href="./index_en.html" lang="en">English version</a>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="目次">
+      <strong>目次</strong>
+      <ol>
+        <li><a href="#section-1">取得する情報</a></li>
+        <li><a href="#section-2">情報の保存場所</a></li>
+        <li><a href="#section-3">第三者提供</a></li>
+        <li><a href="#section-4">外部サービス等</a></li>
+        <li><a href="#section-5">セッション機能</a></li>
+        <li><a href="#section-6">利用者による管理</a></li>
+        <li><a href="#section-7">子どものプライバシー</a></li>
+        <li><a href="#section-8">変更</a></li>
+        <li><a href="#section-9">お問い合わせ</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <section id="section-1">
+        <h2>1. 取得する情報</h2>
+        <p>本アプリは、利用者を識別するための氏名、住所、電話番号、メールアドレス、アカウント情報、位置情報、端末識別子、広告ID等の個人情報を開発者のサーバーへ送信・収集しません。</p>
+        <p>本アプリの機能上、以下の情報が端末内で取り扱われます。</p>
+        <ul>
+          <li>利用者が本アプリ内で作成・編集したテキストファイルおよびフォルダ</li>
+          <li>利用者が他のアプリから共有したテキスト</li>
+          <li>利用者がファイル選択や共有操作により開いたテキストファイルの内容、ファイル名、URI</li>
+          <li>未保存の編集内容、検索文字列、文字コード設定</li>
+          <li>セッション機能で入力したコマンド、作業ディレクトリ、コマンド出力、ペイン名</li>
+        </ul>
+        <p>これらの情報は、本アプリの編集、保存、表示、検索、文字コード変換、エクスポート、セッション表示等の機能を提供するために使用されます。</p>
+      </section>
+
+      <section id="section-2">
+        <h2>2. 情報の保存場所</h2>
+        <p>本アプリで作成したファイルは、原則として端末内の本アプリ専用領域に保存されます。</p>
+        <p>利用者が外部ファイルを開いた場合、本アプリはAndroidの仕組みにより許可された範囲でそのファイルを読み書きします。利用者がエクスポートを実行した場合、Androidの保存先選択画面で指定された場所にテキストを書き出します。</p>
+        <p>本アプリは、インターネット通信権限を要求しておらず、アプリ内で扱うテキストやファイル内容を開発者または第三者のサーバーへ送信しません。</p>
+        <p class="note">なお、端末の設定によりAndroidまたはGoogleのバックアップ機能が有効な場合、本アプリのデータが端末またはGoogleアカウントのバックアップ対象となることがあります。これはOSの機能によるものであり、開発者が取得するものではありません。</p>
+      </section>
+
+      <section id="section-3">
+        <h2>3. 第三者提供</h2>
+        <p>本アプリは、利用者情報を開発者が取得しないため、第三者へ提供しません。</p>
+        <p>ただし、利用者自身がAndroidの共有機能、ファイル保存先選択、または他のアプリとの連携を利用した場合、選択した共有先または保存先のアプリ・サービスにデータが渡ることがあります。その場合の取り扱いは、各アプリ・サービスのプライバシーポリシーに従います。</p>
+      </section>
+
+      <section id="section-4">
+        <h2>4. 外部サービス・解析・広告・アプリ内購入</h2>
+        <p>本アプリは、広告配信サービス、アクセス解析サービス、クラッシュ解析サービス、ログインサービスを使用していません。</p>
+        <p>今後、本アプリでは追加機能を提供するために、Google Playのアプリ内購入機能を使用する場合があります。アプリ内購入を利用する場合、決済処理はGoogle Playにより行われ、開発者がクレジットカード番号、銀行口座情報、Googleアカウントのパスワード等の決済情報を取得することはありません。</p>
+        <p>アプリ内購入の提供、購入状態の確認、購入済み機能の有効化、不正利用防止、購入履歴の復元のために、Google Playから提供される購入状態、商品ID、注文に関連する識別情報等を本アプリ内で取り扱う場合があります。</p>
+        <p>Google Playにおける情報の取り扱いについては、GoogleのプライバシーポリシーおよびGoogle Playの利用規約をご確認ください。</p>
+      </section>
+
+      <section id="section-5">
+        <h2>5. セッション機能について</h2>
+        <p>本アプリのセッション機能では、利用者が入力したコマンドとその出力を画面上に表示・保持します。コマンドの実行結果には、利用者の入力内容や端末内ファイルに関する情報が含まれる場合があります。</p>
+        <p>コマンドの内容および出力は開発者へ送信されません。利用者は、機密情報を含むコマンドや出力を扱う場合、共有・エクスポート・画面表示に注意してください。</p>
+      </section>
+
+      <section id="section-6">
+        <h2>6. 利用者による管理</h2>
+        <p>利用者は、本アプリ内で作成したファイルやフォルダを、アプリ内の削除機能または端末のアプリ設定から削除できます。</p>
+        <p>本アプリをアンインストールすると、通常、本アプリ専用領域に保存されたデータは端末から削除されます。ただし、利用者が外部の保存先へエクスポートしたファイル、他のアプリで管理されているファイル、OSのバックアップに含まれるデータは、アンインストール後も残る場合があります。</p>
+      </section>
+
+      <section id="section-7">
+        <h2>7. 子どものプライバシー</h2>
+        <p>本アプリは、子どもから個人情報を意図的に収集することはありません。</p>
+      </section>
+
+      <section id="section-8">
+        <h2>8. プライバシーポリシーの変更</h2>
+        <p>本ポリシーの内容は、法令の変更、アプリ機能の追加・変更、その他必要に応じて改定されることがあります。重要な変更がある場合は、アプリ配布ページまたは本ファイルにて告知します。</p>
+      </section>
+
+      <section id="section-9">
+        <h2>9. お問い合わせ</h2>
+        <p>本アプリのプライバシーに関するお問い合わせは、アプリの配布ページに記載された開発者連絡先までお願いいたします。</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 MyTextEditer. This page is provided for users of the Android app.</p>
+    </footer>
+  </div>
+</body>
+</html>

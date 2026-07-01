@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy | MyTextEditer</title>
+  <meta name="description" content="Privacy Policy for the Android app MyTextEditer." />
+  <style>
+    :root {
+      --bg: #fffaf7;
+      --card: #ffffffcc;
+      --text: #3f3a3a;
+      --muted: #756f6f;
+      --main: #f7b7c9;
+      --main-soft: #ffe7ef;
+      --accent: #b8e6d3;
+      --accent-soft: #ecfff7;
+      --blue-soft: #eaf3ff;
+      --line: #f0d9e1;
+      --shadow: 0 18px 45px rgba(177, 126, 143, 0.18);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.85;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #ffe7ef 0, transparent 34%),
+        radial-gradient(circle at top right, #e5fff4 0, transparent 30%),
+        linear-gradient(180deg, #fffaf7 0%, #fff2f6 48%, #f5fff9 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: #9a5670;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .page {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 32px 18px 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 170px;
+      height: 170px;
+      right: -46px;
+      top: -58px;
+      background: var(--main-soft);
+    }
+
+    .hero::after {
+      width: 120px;
+      height: 120px;
+      right: 88px;
+      bottom: -54px;
+      background: var(--accent-soft);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #4f7c6b;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      position: relative;
+      margin: 18px 0 8px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+    }
+
+    .lead {
+      position: relative;
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0 0;
+    }
+
+    .meta span,
+    .lang-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 7px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .lang-link { color: #9a5670; }
+
+    .toc {
+      margin: 24px 0;
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(240, 217, 225, 0.9);
+    }
+
+    .toc strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .toc ol {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 4px 22px;
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    main { margin-top: 24px; }
+
+    section {
+      margin: 18px 0;
+      padding: 28px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(240, 217, 225, 0.78);
+      box-shadow: 0 10px 28px rgba(177, 126, 143, 0.10);
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      line-height: 1.4;
+    }
+
+    h2::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--main), var(--accent));
+      box-shadow: 0 0 0 6px rgba(247, 183, 201, 0.25);
+    }
+
+    p { margin: 0 0 1em; }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 0 0 1em; padding-left: 1.25em; }
+    li { margin: 0.25em 0; }
+
+    .note {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: var(--blue-soft);
+      color: #526174;
+    }
+
+    footer {
+      margin-top: 26px;
+      padding: 22px 8px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 18px 12px 42px; }
+      .hero, section { padding: 22px 18px; }
+      .toc ol { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="badge">Android App Privacy Policy</div>
+      <h1>Privacy Policy</h1>
+      <p class="lead">This Privacy Policy explains how user information is handled in the Android app “MyTextEditer” (the “App”).</p>
+      <div class="meta" aria-label="Basic information">
+        <span>App name: MyTextEditer</span>
+        <span>Effective date: July 1, 2026</span>
+        <a class="lang-link" href="./index.html" lang="ja">日本語版</a>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Table of contents">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#section-1">Information handled by the App</a></li>
+        <li><a href="#section-2">Where information is stored</a></li>
+        <li><a href="#section-3">Provision to third parties</a></li>
+        <li><a href="#section-4">External services and purchases</a></li>
+        <li><a href="#section-5">Session feature</a></li>
+        <li><a href="#section-6">User control</a></li>
+        <li><a href="#section-7">Children’s privacy</a></li>
+        <li><a href="#section-8">Changes</a></li>
+        <li><a href="#section-9">Contact</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <section id="section-1">
+        <h2>1. Information handled by the App</h2>
+        <p>The App does not send or collect personal information that identifies users, such as names, addresses, phone numbers, email addresses, account information, location information, device identifiers, or advertising IDs, to the developer’s server.</p>
+        <p>For the functionality of the App, the following information may be handled locally on the user’s device:</p>
+        <ul>
+          <li>Text files and folders created or edited by users within the App</li>
+          <li>Text shared by users from other apps</li>
+          <li>Content, file names, and URIs of text files opened through file selection or sharing operations</li>
+          <li>Unsaved editing content, search strings, and character encoding settings</li>
+          <li>Commands entered in the session feature, working directories, command outputs, and pane names</li>
+        </ul>
+        <p>This information is used to provide App features such as editing, saving, displaying, searching, character encoding conversion, exporting, and session display.</p>
+      </section>
+
+      <section id="section-2">
+        <h2>2. Where information is stored</h2>
+        <p>Files created in the App are generally stored in the App-specific storage area on the user’s device.</p>
+        <p>When a user opens an external file, the App reads and writes that file only within the scope permitted by Android. When a user performs an export operation, the App writes text to the location selected through Android’s save destination selection screen.</p>
+        <p>The App does not request internet access permission and does not send text or file contents handled within the App to the developer’s server or to third-party servers.</p>
+        <p class="note">If Android or Google backup features are enabled in the device settings, App data may be included in backups on the device or in the user’s Google Account. This is a function of the operating system and is not information collected by the developer.</p>
+      </section>
+
+      <section id="section-3">
+        <h2>3. Provision to third parties</h2>
+        <p>Because the developer does not collect user information through the App, the App does not provide such information to third parties.</p>
+        <p>However, if the user uses Android’s sharing feature, file save destination selection, or integration with other apps, data may be passed to the selected app or service. In such cases, the handling of that data is subject to the privacy policy of each app or service.</p>
+      </section>
+
+      <section id="section-4">
+        <h2>4. External services, analytics, advertising, and in-app purchases</h2>
+        <p>The App does not use advertising services, analytics services, crash analytics services, or login services.</p>
+        <p>In the future, the App may use Google Play’s in-app purchase feature to provide additional features. When in-app purchases are used, payment processing is handled by Google Play, and the developer does not obtain payment information such as credit card numbers, bank account information, or Google Account passwords.</p>
+        <p>To provide in-app purchases, confirm purchase status, enable purchased features, prevent unauthorized use, and restore purchase history, the App may handle purchase status, product IDs, order-related identifiers, and similar information provided by Google Play within the App.</p>
+        <p>For information handling by Google Play, please refer to Google’s Privacy Policy and the Google Play Terms of Service.</p>
+      </section>
+
+      <section id="section-5">
+        <h2>5. Session feature</h2>
+        <p>The App’s session feature displays and retains commands entered by users and their outputs on the screen. Command execution results may include user input or information related to files on the device.</p>
+        <p>Command contents and outputs are not sent to the developer. Users should be careful when sharing, exporting, or displaying commands or outputs that contain confidential information.</p>
+      </section>
+
+      <section id="section-6">
+        <h2>6. User control</h2>
+        <p>Users can delete files and folders created within the App using the App’s delete feature or through the device’s app settings.</p>
+        <p>When the App is uninstalled, data stored in the App-specific storage area is normally deleted from the device. However, files exported by the user to external storage locations, files managed by other apps, or data included in operating system backups may remain after uninstallation.</p>
+      </section>
+
+      <section id="section-7">
+        <h2>7. Children’s privacy</h2>
+        <p>The App does not intentionally collect personal information from children.</p>
+      </section>
+
+      <section id="section-8">
+        <h2>8. Changes to this Privacy Policy</h2>
+        <p>This Policy may be revised as necessary due to changes in laws and regulations, additions or changes to App features, or other reasons. If there are important changes, they will be announced on the App distribution page or in this file.</p>
+      </section>
+
+      <section id="section-9">
+        <h2>9. Contact</h2>
+        <p>For inquiries regarding privacy in this App, please contact the developer using the contact information listed on the App distribution page.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 MyTextEditer. This page is provided for users of the Android app.</p>
+    </footer>
+  </div>
+</body>
+</html>
