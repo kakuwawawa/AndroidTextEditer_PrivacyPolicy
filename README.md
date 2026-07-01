@@ -1,0 +1,2 @@
+# AndroidTextEditer_PrivacyPolicy
+AndroidTextEditerのプライバシーポリシーです
